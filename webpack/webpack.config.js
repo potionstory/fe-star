@@ -6,7 +6,7 @@ const webpack = require("webpack");
 
 module.exports = {
   entry: {
-    app: [path.resolve("src/index.jsx")],
+    app: ['@babel/polyfill', path.resolve("src/index.jsx")],
   },
 
   output: {
@@ -36,7 +36,7 @@ module.exports = {
         options: { cacheDirectory: process.env.NODE_ENV === "development" },
       },
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         use: [
           {
             loader: "style-loader",
@@ -50,6 +50,9 @@ module.exports = {
               },
             },
           },
+          {
+            loader: 'sass-loader',
+          }
         ],
       },
     ],
