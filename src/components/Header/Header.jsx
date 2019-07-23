@@ -1,10 +1,11 @@
 import React from 'react';
+import Logo from './Logo';
 import './Header.scss';
 
 const Header = () => {
   return (
     <header>
-      Header
+      <h1><a href="#none"><Logo /></a></h1>
     </header>
   );
 };
