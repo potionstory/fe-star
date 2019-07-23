@@ -6,7 +6,7 @@ import axios from 'axios';
 development: http://localhost:8000/api
 production: http://fe-star.herokuapp.com/api
 */
-axios.defaults.baseURL = 'http://fe-star.herokuapp.com/api';
+axios.defaults.baseURL = 'http://localhost:8000/api';
 
 const FIND = 'member/FIND';
 const CREATE = 'member/CREATE';
