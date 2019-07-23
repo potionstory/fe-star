@@ -3,20 +3,21 @@ import { pender } from 'redux-pender';
 import axios from 'axios';
 
 /*
-development: http://localhost:8000/api
-production: http://fe-star.herokuapp.com/api
+development: http://localhost:8000/
+production: http://fe-star.herokuapp.com/
 */
-axios.defaults.baseURL = 'http://localhost:8000/api';
+console.log(process.env.BASE_URL);
+axios.defaults.baseURL = process.env.BASE_URL;
 
 const FIND = 'member/FIND';
 const CREATE = 'member/CREATE';
 const UPDATE = 'member/UPDATE';
 const REMOVE = 'member/REMOVE';
 
-export const find = createAction(FIND, () => axios.get(`/member`));
-export const create = createAction(CREATE, data => axios.post(`/member`, data));
-export const update = createAction(UPDATE, (id, data) => axios.put(`/member/${id}`, data));
-export const remove = createAction(REMOVE, id => axios.delete(`/member/${id}`));
+export const find = createAction(FIND, () => axios.get(`/api/member`));
+export const create = createAction(CREATE, data => axios.post(`/api/member`, data));
+export const update = createAction(UPDATE, (id, data) => axios.put(`/api/member/${id}`, data));
+export const remove = createAction(REMOVE, id => axios.delete(`/api/member/${id}`));
 
 const init = {
   list: []
