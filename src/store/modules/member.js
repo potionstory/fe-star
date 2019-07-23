@@ -2,11 +2,6 @@ import { createAction, handleActions } from 'redux-actions';
 import { pender } from 'redux-pender';
 import axios from 'axios';
 
-/*
-development: http://localhost:8000/
-production: http://fe-star.herokuapp.com/
-*/
-console.log(process.env.BASE_URL);
 axios.defaults.baseURL = process.env.BASE_URL;
 
 const FIND = 'member/FIND';
