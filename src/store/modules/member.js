@@ -2,7 +2,11 @@ import { createAction, handleActions } from 'redux-actions';
 import { pender } from 'redux-pender';
 import axios from 'axios';
 
-axios.defaults.baseURL = 'http://localhost:8000/api';
+/*
+development: http://localhost:8000/api
+production: http://fe-star.herokuapp.com/api
+*/
+axios.defaults.baseURL = 'http://fe-star.herokuapp.com/api';
 
 const FIND = 'member/FIND';
 const CREATE = 'member/CREATE';
