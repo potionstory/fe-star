@@ -1,8 +1,10 @@
 require("dotenv").config({ silent: true });
 
-const HTMLWebpackPlugin = require("html-webpack-plugin");
+
 const path = require("path");
 const webpack = require("webpack");
+const HTMLWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const baseURL = process.env.NODE_ENV === "development" ? 'http://localhost:8000/' : 'http://fe-star.herokuapp.com/';
 
 module.exports = {
@@ -30,6 +32,10 @@ module.exports = {
     new HTMLWebpackPlugin({
       template: path.resolve("public/index.html"),
     }),
+    new MiniCssExtractPlugin({
+      filename: "[name]_[hash].css",
+      chunkFilename: "[id]_[hash].css"
+    })
   ],
 
   module: {
@@ -42,23 +48,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: [
-          {
-            loader: "style-loader",
-          },
-          {
-            loader: "css-loader",
-            options: {
-              sourceMap: true,
-              modules: {
-                localIdentName: "[name]--[hash:base64:5]",
-              },
-            },
-          },
-          {
-            loader: 'sass-loader',
-          }
-        ],
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
       },
     ],
   },
