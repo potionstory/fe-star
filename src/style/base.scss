@@ -4,6 +4,18 @@
   @return url($icon)
 }
 
-body {
+body {background-color: #232323;}
+
+.wrap {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  max-width: 1240px;
+  height: 100%;
+  margin: 0 auto;
   background: #232323;
+}
+
+.container {
+  padding-top: 300px;
 }
