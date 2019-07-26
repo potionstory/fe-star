@@ -42,58 +42,39 @@ header {
     height: 50px;
     margin: 0 auto;
     border-radius: 25px;
-    background-color: #323232;
+    background-image: linear-gradient( to right, #0194ef 0%, #e1112c 35%, #ffb610 65%, #1bb934 100% );
     .bg-active__bar {
       overflow: hidden;
       position: absolute;
       top: 0;
       left: 40%;
-      width: 248px;
-      height: 50px;
+      width: calc(20% - 6px);
+      height: 44px;
+      margin: 3px;
+      border: 3px solid transparent;
       border-radius: 25px;
-      background-image: -webkit-gradient(linear,left top,right top,from(#ff8a00),to(#da1b60));
-      background-image: linear-gradient(to right,#ff8a00,#da1b60);
-      -webkit-transition: left .5s ease-in-out;
-      transition: left .5s ease-in-out;
-      .menu-gradient {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 1;
-        -webkit-transition: opacity .5s ease-in-out;
-        transition: opacity .5s ease-in-out;
-      }
+      background: #232323;
+      -webkit-transition: left .3s ease-in-out;
+      transition: left .3s ease-in-out;
     }
     &.active0 {
       .menu-gradient {
         opacity: 0;
+        -webkit-transition: opacity .3s ease-in-out;
+        transition: opacity .3s ease-in-out;
       }
     }
     &.active1 {
-      .bg-active__bar {left: 0%;}
-      .menu-gradient {
-        background-color: #0194ef;
-      }
+      .bg-active__bar {left: 0;}
     }
     &.active2 {
       .bg-active__bar {left: 20%;}
-      .menu-gradient {
-        background-color: #1bb934;
-      }
     }
     &.active3 {
       .bg-active__bar {left: 60%;}
-      .menu-gradient {
-        background-color: #e1112c;
-      }
     }
     &.active4 {
       .bg-active__bar {left: 80%;}
-      .menu-gradient {
-        background-color: #ffb610;
-      }
     }
     ul {
       display: flex;
@@ -111,8 +92,31 @@ header {
         a {
           display: block;
           height: 50px;
+          font-size: 16px;
+          font-weight: 800;
           color: #fff;
           line-height: 50px;
+          transition: color .3s ease-in-out;
+        }
+        &.menu0 {
+          a:hover {
+            color: #0194ef;
+          }
+        }
+        &.menu1 {
+          a:hover {
+            color: #e1112c;
+          }
+        }
+        &.menu2 {
+          a:hover {
+            color: #ffb610;
+          }
+        }
+        &.menu3 {
+          a:hover {
+            color: #1bb934;
+          }
         }
       }
     }
