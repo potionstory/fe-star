@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCompass, faInfoCircle, faLaugh, faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
+import { faCompass, faInfoCircle, faGrinStars, faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
 import Logo from './Logo';
 import './Header.scss';
 
@@ -18,7 +18,7 @@ class Header extends Component {
     },
     {
       name: 'MEMBER',
-      icon: faLaugh
+      icon: faGrinStars
     },
     {
       name: 'FAQ',
