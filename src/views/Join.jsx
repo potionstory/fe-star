@@ -1,16 +1,16 @@
 import React from 'react';
 import Layout from './Layout';
 
-const Member = () => {
+const Join = () => {
   return (
     <Layout>
-      <h2>MEMBER PAGE</h2>
+      <h2>JOIN PAGE</h2>
       <article className="contents">
-        <h3>MEMBER</h3>
+        <h3>JOIN</h3>
         <p>가나다라마바사아자차카타파하<br />ABCEDFGHIJKLMNOPQRSTUVWXYZ<br />0123456789</p>
       </article>
     </Layout>
   );
 };
 
-export default Member;
+export default Join;

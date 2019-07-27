@@ -1,16 +1,16 @@
 import React from 'react';
 import Layout from './Layout';
 
-const Member = () => {
+const Info = () => {
   return (
     <Layout>
-      <h2>MEMBER PAGE</h2>
+      <h2>INFO PAGE</h2>
       <article className="contents">
-        <h3>MEMBER</h3>
+        <h3>INFO</h3>
         <p>가나다라마바사아자차카타파하<br />ABCEDFGHIJKLMNOPQRSTUVWXYZ<br />0123456789</p>
       </article>
     </Layout>
   );
 };
 
-export default Member;
+export default Info;

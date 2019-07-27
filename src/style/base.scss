@@ -17,5 +17,12 @@ body {background-color: #232323;}
 }
 
 .container {
-  padding-top: 300px;
+  padding: 300px 0;
+  h2 {
+    font-size: 100px;
+    color: $colorSet-white;
+  }
+  .contents {
+    color: $colorSet-white;
+  }
 }

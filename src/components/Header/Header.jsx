@@ -9,18 +9,22 @@ class Header extends Component {
 
   state = {
     menu: [{
+      path: '/about',
       name: 'ABOUT',
       icon: faCompass
     },
     {
+      path: '/info',
       name: 'INFO',
       icon: faInfoCircle
     },
     {
+      path: '/member',
       name: 'MEMBER',
       icon: faGrinStars
     },
     {
+      path: '/faq',
       name: 'FAQ',
       icon: faQuestionCircle
     }],
@@ -46,8 +50,8 @@ class Header extends Component {
           </span>
           <ul>
             {menu.map((value, index) => (
-              <li key={index} className={`menu${index}`} onMouseOver={() => handleMenuActive(index + 1)} onFocus={() => handleMenuActive(index + 1)}>
-                <Link to="/">
+              <li key={index} className={`menu${index + 1}`} onMouseOver={() => handleMenuActive(index + 1)} onFocus={() => handleMenuActive(index + 1)}>
+                <Link to={value.path}>
                   <FontAwesomeIcon icon={value.icon} size="8x" />
                   <div>{value.name}</div>
                 </Link>
