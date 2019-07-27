@@ -4,7 +4,7 @@ import './Footer.scss';
 const Footer = () => {
   return (
     <footer>
-      Footer
+      <span>COPYRIGHT&copy; 2019 ALL RIGHTS RESERVED BY POTIONSTORY</span>
     </footer>
   );
 };

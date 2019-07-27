@@ -1,3 +1,5 @@
+@import '../../style/common';
+
 header {
   position: fixed;
   top: 50px;
@@ -11,7 +13,7 @@ header {
     z-index: 0;
     width: 100%;
     height: 75px;
-    background-color: #232323;
+    background-color: $colorSet-darkGray;
     content: '';
   }
   h1 {
@@ -22,6 +24,8 @@ header {
     width: 248px;
     height: 150px;
     margin-left: -124px;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
     a {
       display: block;
       top: -50px;
@@ -42,39 +46,20 @@ header {
     height: 50px;
     margin: 0 auto;
     border-radius: 25px;
-    background-image: linear-gradient( to right, #0194ef 0%, #e1112c 35%, #ffb610 65%, #1bb934 100% );
+    background-color: $colorSet-lightGray;
     .bg-active__bar {
       overflow: hidden;
       position: absolute;
       top: 0;
       left: 40%;
-      width: calc(20% - 6px);
-      height: 44px;
-      margin: 3px;
-      border: 3px solid transparent;
+      width: 20%;
+      height: 50px;
+      border: 3px solid $colorSet-lightGray;
       border-radius: 25px;
-      background: #232323;
-      -webkit-transition: left .3s ease-in-out;
-      transition: left .3s ease-in-out;
-    }
-    &.active0 {
-      .menu-gradient {
-        opacity: 0;
-        -webkit-transition: opacity .3s ease-in-out;
-        transition: opacity .3s ease-in-out;
-      }
-    }
-    &.active1 {
-      .bg-active__bar {left: 0;}
-    }
-    &.active2 {
-      .bg-active__bar {left: 20%;}
-    }
-    &.active3 {
-      .bg-active__bar {left: 60%;}
-    }
-    &.active4 {
-      .bg-active__bar {left: 80%;}
+      box-sizing: border-box;
+      background: $colorSet-darkGray;
+      -webkit-transition: left 300ms ease-in-out, border-color 300ms ease-in-out;
+      transition: left 300ms ease-in-out, border-color 300ms ease-in-out;
     }
     ul {
       display: flex;
@@ -90,42 +75,98 @@ header {
           margin-left: 124px;
         }
         a {
-          display: block;
+          display: flex;
+          width: 100%;
           height: 50px;
-          font-size: 16px;
-          font-weight: 800;
-          color: #fff;
-          line-height: 50px;
-          transition: color .3s ease-in-out;
+          align-items: center;
+          justify-content: center;
+          font-size: $fontSize-14;
+          color: $colorSet-white;
+          transition: color 300ms ease-in-out;
+          svg {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            border: 3px solid $colorSet-darkGray;
+            background-color: $colorSet-darkGray;
+            border-radius: 50%;
+            opacity: 0;
+            transform: translate(-50%, -34px);
+            transition: opacity 300ms ease-in-out;
+          }
+          &:hover,
+          &:focus {
+            svg {
+              opacity: 1;
+            }
+          }
         }
         &.menu0 {
-          a:hover {
-            color: #0194ef;
+          a:hover,
+          a:focus {
+            color: $colorSet-blue;
           }
         }
         &.menu1 {
-          a:hover {
-            color: #e1112c;
+          a:hover,
+          a:focus {
+            color: $colorSet-red;
           }
         }
         &.menu2 {
-          a:hover {
-            color: #ffb610;
+          a:hover,
+          a:focus {
+            color: $colorSet-yellow;
           }
         }
         &.menu3 {
-          a:hover {
-            color: #1bb934;
+          a:hover,
+          a:focus {
+            color: $colorSet-green;
           }
         }
       }
     }
   }
-}
-
-body {
-  background-color:#0194ef;
-  background-color:#1bb934;
-  background-color:#e1112c;
-  background-color:#ffb610;
+  &.active0 {
+    h1 {
+      opacity: 1;
+    }
+    nav {
+      ul {
+        li {
+          a {
+            color: $colorSet-white;
+            svg {
+              opacity: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.active1 {
+    .bg-active__bar {
+      left: 0;
+      border-color: $colorSet-blue;
+    }
+  }
+  &.active2 {
+    .bg-active__bar {
+      left: 20%;
+      border-color: $colorSet-red;
+    }
+  }
+  &.active3 {
+    .bg-active__bar {
+      left: 60%;
+      border-color: $colorSet-yellow;
+    }
+  }
+  &.active4 {
+    .bg-active__bar {
+      left: 80%;
+      border-color: $colorSet-green;
+    }
+  }
 }

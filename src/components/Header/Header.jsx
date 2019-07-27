@@ -1,17 +1,29 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCompass, faInfoCircle, faLaugh, faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
 import Logo from './Logo';
 import './Header.scss';
 
 class Header extends Component {
 
   state = {
-    menuName: [
-      'ABOUT',
-      'INFO',
-      'MEMBER',
-      'FAQ'
-    ],
+    menu: [{
+      name: 'ABOUT',
+      icon: faCompass
+    },
+    {
+      name: 'INFO',
+      icon: faInfoCircle
+    },
+    {
+      name: 'MEMBER',
+      icon: faLaugh
+    },
+    {
+      name: 'FAQ',
+      icon: faQuestionCircle
+    }],
     index: 0
   };
 
@@ -22,19 +34,24 @@ class Header extends Component {
   };
 
   render() {
-    const { menuName, index } = this.state;
+    const { menu, index } = this.state;
     const { handleMenuActive } = this;
 
     return (
-      <header>
-        <h1 onMouseOver={() => handleMenuActive(0)}><Link to="/"><Logo /></Link></h1>
-        <nav className={`active${index}`} onMouseOut={() => handleMenuActive(0)}>
+      <header className={`active${index}`}>
+        <h1><Link to="/" onMouseOver={() => handleMenuActive(0)} onFocus={() => handleMenuActive(0)}><Logo /></Link></h1>
+        <nav onMouseOut={() => handleMenuActive(0)} onBlur={() => handleMenuActive(0)}>
           <span className="bg-active__bar">
             <span className="menu-gradient"></span>
           </span>
           <ul>
-            {menuName.map((value, index) => (
-              <li key={index} className={`menu${index}`} onMouseOver={() => handleMenuActive(index + 1)}><Link to="/">{value}</Link></li>
+            {menu.map((value, index) => (
+              <li key={index} className={`menu${index}`} onMouseOver={() => handleMenuActive(index + 1)} onFocus={() => handleMenuActive(index + 1)}>
+                <Link to="/">
+                  <FontAwesomeIcon icon={value.icon} size="8x" />
+                  <div>{value.name}</div>
+                </Link>
+              </li>
             ))}
           </ul>
         </nav>

@@ -1,3 +1,16 @@
+/* coloSet defined */
+$colorSet-white: #ffffff;
+$colorSet-black: #000000;
+$colorSet-darkGray: #232323;
+$colorSet-lightGray: #323232;
+$colorSet-blue: #0194ef;
+$colorSet-red: #e1112c;
+$colorSet-yellow: #ffb610;
+$colorSet-green: #1bb934;
+
+$fontSize-12: 0.750rem;
+$fontSize-14: 0.875rem;
+
 @mixin unstyle-button() {
   outline: none;
   border: none;
