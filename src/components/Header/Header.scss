@@ -3,8 +3,8 @@
 header {
   position: fixed;
   top: 50px;
-  left: 0;
-  width: 100%;
+  left: 20px;
+  width: calc(100% - 40px);
   height: 50px;
   &:before {
     position: absolute;
@@ -31,9 +31,9 @@ header {
     top: -50px;
     left: 50%;
     z-index: 100;
-    width: 248px;
+    width: 20%;
     height: 150px;
-    margin-left: -124px;
+    margin-left: -10%;
     opacity: 0;
     transition: opacity 300ms ease-in-out;
     a {
@@ -42,11 +42,14 @@ header {
       left: 0;
       width: 100%;
       height: 100%;
+      padding: 10px;
+      box-sizing: border-box;
       text-align: center;
-      line-height: 150px;
       svg {
+        width: 100%;
+        height: 100%;
         filter: drop-shadow(4px 4px 2px black);
-        vertical-align: middle;
+        vertical-align: top;
       }
     }
   }
@@ -80,10 +83,10 @@ header {
         flex: 1;
         text-align: center;
         &:nth-child(2) {
-          margin-right: 124px;
+          margin-right: 10%;
         }
         &:nth-child(3) {
-          margin-left: 124px;
+          margin-left: 10%;
         }
         a {
           display: flex;
@@ -100,7 +103,6 @@ header {
             top: 0;
             left: 50%;
             border: 3px solid $colorSet-darkGray;
-            background-color: $colorSet-darkGray;
             border-radius: 50%;
             opacity: 0;
             transform: translate(-50%, -34px);
