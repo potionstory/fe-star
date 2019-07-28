@@ -5,7 +5,6 @@ import Main from '../views/Main';
 import About from '../views/About';
 import Info from '../views/Info';
 import Member from '../views/Member';
-import Faq from '../views/Faq';
 import Join from '../views/Join';
 import Test from '../views/Test';
 
@@ -18,7 +17,6 @@ const App = () => {
         <Route path="/about" component={ About } />
         <Route path="/info" component={ Info } />
         <Route path="/member" component={ Member } />
-        <Route path="/faq" component={ Faq } />
         <Route path="/join" component={ Join } />
         <Route path="/test" component={ Test } />
         <Redirect to="/" />

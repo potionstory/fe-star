@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCompass, faInfoCircle, faGrinStars, faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
+import { faCompass, faInfoCircle, faGrinStars, faPlayCircle } from "@fortawesome/free-solid-svg-icons";
 import Logo from './Logo';
 import './Header.scss';
 
@@ -24,9 +24,9 @@ class Header extends Component {
       icon: faGrinStars
     },
     {
-      path: '/faq',
-      name: 'FAQ',
-      icon: faQuestionCircle
+      path: '/join',
+      name: 'JOIN',
+      icon: faPlayCircle
     }],
     index: 0
   };
@@ -45,14 +45,12 @@ class Header extends Component {
       <header className={`active${index}`}>
         <h1><Link to="/" onMouseOver={() => handleMenuActive(0)} onFocus={() => handleMenuActive(0)}><Logo /></Link></h1>
         <nav onMouseOut={() => handleMenuActive(0)} onBlur={() => handleMenuActive(0)}>
-          <span className="box-tracker">
-            <span className="box-tacker__inner"></span>
-          </span>
+          <span className="box-tracker"></span>
           <ul>
             {menu.map((value, index) => (
               <li key={index} className={`menu${index + 1}`} onMouseOver={() => handleMenuActive(index + 1)} onFocus={() => handleMenuActive(index + 1)}>
                 <Link to={value.path}>
-                  <FontAwesomeIcon icon={value.icon} size="8x" />
+                  <FontAwesomeIcon icon={value.icon} size="10x" />
                   <div>{value.name}</div>
                 </Link>
               </li>

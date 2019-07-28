@@ -2,16 +2,17 @@
 
 header {
   position: fixed;
-  top: 50px;
+  top: 0;
   left: 0;
   z-index: 100;
   width: 100%;
-  height: 50px;
-  padding: 0 20px;
+  height: 100px;
+  padding: 50px 20px 0;
   box-sizing: border-box;
+  background-color: $colorSet-darkGray;
   h1 {
     position: absolute;
-    top: -50px;
+    top: 0;
     left: 50%;
     z-index: 100;
     width: 20%;
@@ -57,9 +58,6 @@ header {
       background: $colorSet-darkGray;
       -webkit-transition: left 300ms ease-in-out, border-color 300ms ease-in-out;
       transition: left 300ms ease-in-out, border-color 300ms ease-in-out;
-      .box-tacker__inner {
-        background-color: #fff;
-      }
     }
     ul {
       display: flex;
@@ -91,7 +89,7 @@ header {
             border: 3px solid $colorSet-darkGray;
             border-radius: 50%;
             opacity: 0;
-            transform: translate(-50%, -34px);
+            transform: translate(-50%, -45px);
             transition: opacity 300ms ease-in-out;
           }
         }
@@ -146,11 +144,11 @@ header {
   &.active3 {
     .box-tracker {
       left: 60%;
-      border-color: $colorSet-yellow;
+      border-color: $colorSet-green;
     }
     .menu3 {
       a {
-        color: $colorSet-yellow;
+        color: $colorSet-green;
         svg {
           opacity: 1;
         }
@@ -160,11 +158,11 @@ header {
   &.active4 {
     .box-tracker {
       left: 80%;
-      border-color: $colorSet-green;
+      border-color: $colorSet-yellow;
     }
     .menu4 {
       a {
-        color: $colorSet-green;
+        color: $colorSet-yellow;
         svg {
           opacity: 1;
         }
@@ -176,9 +174,15 @@ header {
 
 @media only screen and (max-width: 480px) {
   header {
-    top: 10px;
-    height: 40px;
-    padding: 0 10px;
+    top: 0;
+    height: 50px;
+    padding: 10px 10px 0;
+    h1 {
+      height: 60px;
+      a {
+        padding: 5px;
+      }
+    }
     nav {
       .box-tracker {
         border-width: 2px;
@@ -186,7 +190,11 @@ header {
       ul {
         li {
           a {
-            font-weight: 400;
+            svg {
+              width: 60px !important;
+              height: 60px !important;
+              transform: translate(-50%, -10px);
+            }
           }
         }
       }
