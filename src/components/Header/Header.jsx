@@ -8,6 +8,7 @@ import './Header.scss';
 class Header extends Component {
 
   state = {
+    index: 0,
     menu: [{
       path: '/about',
       name: 'ABOUT',
@@ -28,7 +29,6 @@ class Header extends Component {
       name: 'JOIN',
       icon: faPlayCircle
     }],
-    index: 0
   };
 
   handleMenuActive = (index) => {
@@ -38,19 +38,21 @@ class Header extends Component {
   };
 
   render() {
-    const { menu, index } = this.state;
+    const { index, menu } = this.state;
     const { handleMenuActive } = this;
 
     return (
       <header className={`active${index}`}>
-        <h1><Link to="/" onMouseOver={() => handleMenuActive(0)} onFocus={() => handleMenuActive(0)}><Logo /></Link></h1>
-        <nav onMouseOut={() => handleMenuActive(0)} onBlur={() => handleMenuActive(0)}>
+        <h1><Link to="/" onClick={() => handleMenuActive(0)}><Logo /></Link></h1>
+        <nav>
           <span className="box-tracker"></span>
           <ul>
             {menu.map((value, index) => (
-              <li key={index} className={`menu${index + 1}`} onMouseOver={() => handleMenuActive(index + 1)} onFocus={() => handleMenuActive(index + 1)}>
-                <Link to={value.path}>
-                  <FontAwesomeIcon icon={value.icon} size="10x" />
+              <li key={index}
+                className={`menu${index + 1}`}
+                >
+                <Link to={value.path} onClick={() => handleMenuActive(index + 1)}>
+                  <FontAwesomeIcon icon={value.icon} size="8x" />
                   <div>{value.name}</div>
                 </Link>
               </li>
