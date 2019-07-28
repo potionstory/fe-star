@@ -88,6 +88,7 @@ header {
             left: 50%;
             border: 3px solid $colorSet-darkGray;
             border-radius: 50%;
+            background-color: $colorSet-darkGray;
             opacity: 0;
             transform: translate(-50%, -45px);
             transition: opacity 300ms ease-in-out;
