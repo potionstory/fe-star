@@ -12,6 +12,16 @@ header {
   box-sizing: border-box;
   background-color: $colorSet-darkGray;
   transform: translateX(-50%);
+  &:before {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    z-index: 50;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, $colorSet-darkGray 0%,rgba(35,35,35,0) 100%);
+    content: '';
+  }
   h1 {
     position: absolute;
     top: 0;
@@ -181,6 +191,10 @@ header {
     top: 0;
     height: 50px;
     padding: 10px 10px 0;
+    &:before {
+      top: 50px;
+      height: 50px;
+    }
     h1 {
       height: 60px;
       a {
