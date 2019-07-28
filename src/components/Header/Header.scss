@@ -3,29 +3,12 @@
 header {
   position: fixed;
   top: 50px;
-  left: 20px;
-  width: calc(100% - 40px);
+  left: 0;
+  z-index: 100;
+  width: 100%;
   height: 50px;
-  &:before {
-    position: absolute;
-    top: -50px;
-    left: 0;
-    z-index: 0;
-    width: 100%;
-    height: 100px;
-    background-color: $colorSet-darkGray;
-    content: '';
-  }
-  &:after {
-    position: absolute;
-    top: 50px;
-    left: 0;
-    z-index: 0;
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(to bottom, $colorSet-darkGray 0%,rgba(0,0,0,0) 100%);
-    content: '';
-  }
+  padding: 0 20px;
+  box-sizing: border-box;
   h1 {
     position: absolute;
     top: -50px;
@@ -57,23 +40,26 @@ header {
     position: relative;
     z-index: 50;
     max-width: 1240px;
-    height: 50px;
+    height: 100%;
     margin: 0 auto;
     border-radius: 25px;
     background-color: $colorSet-lightGray;
-    .bg-active__bar {
+    .box-tracker {
       overflow: hidden;
       position: absolute;
       top: 0;
       left: 40%;
       width: 20%;
-      height: 50px;
+      height: 100%;
       border: 3px solid $colorSet-lightGray;
       border-radius: 25px;
       box-sizing: border-box;
       background: $colorSet-darkGray;
       -webkit-transition: left 300ms ease-in-out, border-color 300ms ease-in-out;
       transition: left 300ms ease-in-out, border-color 300ms ease-in-out;
+      .box-tacker__inner {
+        background-color: #fff;
+      }
     }
     ul {
       display: flex;
@@ -91,7 +77,7 @@ header {
         a {
           display: flex;
           width: 100%;
-          height: 50px;
+          height: 100%;
           align-items: center;
           justify-content: center;
           font-size: $fontSize-14;
@@ -130,7 +116,7 @@ header {
     }
   }
   &.active1 {
-    .bg-active__bar {
+    .box-tracker {
       left: 0;
       border-color: $colorSet-blue;
     }
@@ -144,7 +130,7 @@ header {
     }
   }
   &.active2 {
-    .bg-active__bar {
+    .box-tracker {
       left: 20%;
       border-color: $colorSet-red;
     }
@@ -158,7 +144,7 @@ header {
     }
   }
   &.active3 {
-    .bg-active__bar {
+    .box-tracker {
       left: 60%;
       border-color: $colorSet-yellow;
     }
@@ -172,7 +158,7 @@ header {
     }
   }
   &.active4 {
-    .bg-active__bar {
+    .box-tracker {
       left: 80%;
       border-color: $colorSet-green;
     }
@@ -181,6 +167,27 @@ header {
         color: $colorSet-green;
         svg {
           opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 480px) {
+  header {
+    top: 10px;
+    height: 40px;
+    padding: 0 10px;
+    nav {
+      .box-tracker {
+        border-width: 2px;
+      }
+      ul {
+        li {
+          a {
+            font-weight: 400;
+          }
         }
       }
     }

@@ -45,8 +45,8 @@ class Header extends Component {
       <header className={`active${index}`}>
         <h1><Link to="/" onMouseOver={() => handleMenuActive(0)} onFocus={() => handleMenuActive(0)}><Logo /></Link></h1>
         <nav onMouseOut={() => handleMenuActive(0)} onBlur={() => handleMenuActive(0)}>
-          <span className="bg-active__bar">
-            <span className="menu-gradient"></span>
+          <span className="box-tracker">
+            <span className="box-tacker__inner"></span>
           </span>
           <ul>
             {menu.map((value, index) => (
