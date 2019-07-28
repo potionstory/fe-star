@@ -80,7 +80,12 @@ header {
           font-size: $fontSize-14;
           font-weight: 600;
           color: $colorSet-white;
-          transition: color 300ms ease-in-out;
+          opacity: 0.5;
+          transition: opacity 300ms ease-in-out, color 300ms ease-in-out;
+          &:hover,
+          &:focus {
+            opacity: 1;
+          }
           svg {
             position: absolute;
             top: 0;
@@ -91,30 +96,6 @@ header {
             opacity: 0;
             transform: translate(-50%, -31px);
             transition: opacity 300ms ease-in-out;
-          }
-        }
-        &.menu1 {
-          a:hover,
-          a:focus {
-            color: $colorSet-blue;
-          }
-        }
-        &.menu2 {
-          a:hover,
-          a:focus {
-            color: $colorSet-red;
-          }
-        }
-        &.menu3 {
-          a:hover,
-          a:focus {
-            color: $colorSet-green;
-          }
-        }
-        &.menu4 {
-          a:hover,
-          a:focus {
-            color: $colorSet-yellow;
           }
         }
       }
@@ -138,6 +119,7 @@ header {
     .menu1 {
       a {
         color: $colorSet-blue;
+        opacity: 1;
         svg {
           opacity: 1;
         }
@@ -152,6 +134,7 @@ header {
     .menu2 {
       a {
         color: $colorSet-red;
+        opacity: 1;
         svg {
           opacity: 1;
         }
@@ -166,6 +149,7 @@ header {
     .menu3 {
       a {
         color: $colorSet-green;
+        opacity: 1;
         svg {
           opacity: 1;
         }
@@ -180,6 +164,7 @@ header {
     .menu4 {
       a {
         color: $colorSet-yellow;
+        opacity: 1;
         svg {
           opacity: 1;
         }
