@@ -43,15 +43,16 @@ class Header extends Component {
 
     return (
       <header className={`active${index}`}>
-        <h1><Link to="/" onClick={() => handleMenuActive(0)}><Logo /></Link></h1>
+        <h1 onClick={() => handleMenuActive(0)}><Link to="/"><Logo /></Link></h1>
         <nav>
           <span className="box-tracker"></span>
           <ul>
             {menu.map((value, index) => (
               <li key={index}
                 className={`menu${index + 1}`}
+                onClick={() => handleMenuActive(index + 1)}
                 >
-                <Link to={value.path} onClick={() => handleMenuActive(index + 1)}>
+                <Link to={value.path}>
                   <FontAwesomeIcon icon={value.icon} size="8x" />
                   <div>{value.name}</div>
                 </Link>
