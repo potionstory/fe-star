@@ -21,9 +21,51 @@ body {
 
 .container {
   padding: 300px 0;
-  h2 {
-    font-size: 100px;
-    color: $colorSet-white;
+  .font-gradient {
+    display: inline-block;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .headline {
+    text-align: center;
+    h2 {
+      span {
+        font-size: $fontSize-80;
+        line-height: 5.500rem;
+      }
+    }
+    p {
+      margin-top: 3.125rem;
+      span {
+        font-size: $fontSize-32;
+        font-weight: 600;
+        line-height: 2.750rem;
+      }
+    }
+  }
+  .section_about {
+    .font-gradient {
+      background-image: linear-gradient(to right, $colorSet-darkBlue, $colorSet-blue);
+      background-image: -webkit-linear-gradient(to right, $colorSet-darkBlue, $colorSet-blue);
+    }
+  }
+  .section_info {
+    .font-gradient {
+      background-image: linear-gradient(to right, $colorSet-darkRed, $colorSet-red);
+      background-image: -webkit-linear-gradient(to right, $colorSet-darkRed, $colorSet-red);
+    }
+  }
+  .section_member {
+    .font-gradient {
+      background-image: linear-gradient(to right, $colorSet-darkGreen, $colorSet-green);
+      background-image: -webkit-linear-gradient(to right, $colorSet-darkGreen, $colorSet-green);
+    }
+  }
+  .section_join {
+    .font-gradient {
+      background-image: linear-gradient(to right, $colorSet-darkYellow, $colorSet-yellow);
+      background-image: -webkit-linear-gradient(to right, $colorSet-darkYellow, $colorSet-yellow);
+    }
   }
   .contents {
     color: $colorSet-white;

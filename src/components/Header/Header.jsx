@@ -31,22 +31,6 @@ class Header extends Component {
     }],
   };
 
-  componentDidMount() {
-    const { pathIndex } = this.props;
-    console.log('componentDidMout: ' + pathIndex);
-    // this.setState({
-    //   index: pathIndex
-    // });
-  };
-
-  componentDidUpdate() {
-    const { pathIndex } = this.props;
-    console.log('componentDidUpdate: ' + pathIndex);
-    // this.setState({
-    //   index: pathIndex
-    // });
-  };
-
   handleMenuActive = (index) => {
     this.setState({
       index

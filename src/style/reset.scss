@@ -28,7 +28,7 @@ button {
   @include unstyle-button();
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   margin: 0;
 }
@@ -37,4 +37,9 @@ ul, ol, dl {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+span, p, div {
+  margin: 0;
+  padding: 0;
 }
