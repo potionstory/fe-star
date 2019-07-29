@@ -8,10 +8,10 @@ import Member from '../views/Member';
 import Join from '../views/Join';
 import Test from '../views/Test';
 
-const App = () => {
+const App = ({ location: { pathname } } = props) => {
   return (
     <>
-      <Header />
+      <Header pathIndex={pathname} />
       <Switch>
         <Route exact path="/" component={ Main } />
         <Route path="/about" component={ About } />
