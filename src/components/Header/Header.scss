@@ -41,7 +41,7 @@ header {
       padding: 10px;
       box-sizing: border-box;
       text-align: center;
-      svg {
+      img {
         width: 100%;
         height: 100%;
         filter: drop-shadow(4px 4px 2px black);
@@ -56,14 +56,14 @@ header {
     height: 100%;
     margin: 0 auto;
     border-radius: 25px;
-    background-color: $colorSet-lightGray;
+    background-color: $colorSet-gray;
     .box-tracker {
       overflow: hidden;
       position: absolute;
       top: 0;
       width: 20%;
       height: 100%;
-      border: 3px solid $colorSet-lightGray;
+      border: 3px solid $colorSet-gray;
       border-radius: 25px;
       box-sizing: border-box;
       background: $colorSet-darkGray;
@@ -141,11 +141,11 @@ header {
   &.active2 {
     .box-tracker {
       left: 20%;
-      border-color: $colorSet-red;
+      border-color: $colorSet-pink;
     }
     .menu2 {
       a {
-        color: $colorSet-red;
+        color: $colorSet-pink;
         opacity: 1;
         svg {
           opacity: 1;

@@ -34,7 +34,7 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: "[name]_[hash].css",
-      chunkFilename: "[id]_[hash].css"
+      chunkFilename: "[id]_[hash].css",
     })
   ],
 
@@ -48,8 +48,16 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
+      {
+        test: /\.(ico|png|jpg|jpeg|gif|svg)?$/,
+        loader: "url-loader",
+        options: {
+          name: "[name].[ext]?[hash]",
+          limit: 10000,
+        }
+      }
     ],
   },
 };
