@@ -43,6 +43,12 @@ body {
       }
     }
   }
+  .section_main {
+    .font-gradient {
+      background-image: linear-gradient(to right, $colorSet-blue 0%, $colorSet-red 33.3333%, $colorSet-green 66.6666%, $colorSet-yellow 100%);
+      background-image: -webkit-linear-gradient(to right, $colorSet-blue 0%, $colorSet-red 33.3333%, $colorSet-green 66.6666%, $colorSet-yellow 100%);
+    }
+  }
   .section_about {
     .font-gradient {
       background-image: linear-gradient(to right, $colorSet-darkBlue, $colorSet-blue);
