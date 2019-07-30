@@ -15,7 +15,7 @@ class Main extends Component {
           <div className="headline">
             <div className="headline-image"><img src={HeadImg} /></div>
             <h2><span className="font-gradient">FE-STAR<br />2019</span></h2>
-            <p><span className="font-gradient">더 지니어스<br />15:00 - 20:00</span></p>
+            <p><span className="font-gradient">2019.10.05<br />15:00 - 20:00</span></p>
           </div>
         </section>
       </Layout>
