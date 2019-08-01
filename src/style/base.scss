@@ -35,16 +35,16 @@ body {
       }
     }
     h2 {
-      margin-top: 5rem;
+      margin-top: 3rem;
       span {
-        font-size: $fontSize-64;
-        line-height: 5rem;
+        font-size: $fontSize-56;
+        line-height: 4.5rem;
       }
     }
     p {
       margin-top: 3.5rem;
       span {
-        font-size: $fontSize-32;
+        font-size: $fontSize-30;
         font-weight: 600;
         line-height: 2.75rem;
       }
@@ -87,7 +87,7 @@ body {
 }
 
 @media only screen and (max-width: 480px) {
-  * {
+  html {
     font-size: 12px;
   }
   .wrap {
