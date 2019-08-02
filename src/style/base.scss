@@ -27,10 +27,10 @@ body {
     .headline {
       text-align: center;
       .headline-image {
-        max-height: 715px;
+        max-height: 640px;
         position: relative;
         img {
-          max-width: 715px;
+          max-width: 640px;
           width: 100%;
           height: auto;
           filter: drop-shadow(5px 5px 2px black);
@@ -39,7 +39,10 @@ body {
           position: absolute;
           top: 50%;
           left: 50%;
+          width: 30%;
+          height: 30%;
           transform: translate(-50%, -50%);
+          filter: drop-shadow(5px 5px 2px black);
         }
       }
       h2 {
@@ -69,11 +72,21 @@ body {
         background-image: linear-gradient(to right, $colorSet-darkBlue, $colorSet-blue);
         background-image: -webkit-linear-gradient(to right, $colorSet-darkBlue, $colorSet-blue);
       }
+      .headline {
+        svg {
+          color: $colorSet-blue;
+        }
+      }
     }
     .section_info {
       .font-gradient {
         background-image: linear-gradient(to right, $colorSet-darkPink, $colorSet-pink);
         background-image: -webkit-linear-gradient(to right, $colorSet-darkPink, $colorSet-pink);
+      }
+      .headline {
+        svg {
+          color: $colorSet-pink;
+        }
       }
     }
     .section_member {
@@ -81,11 +94,21 @@ body {
         background-image: linear-gradient(to right, $colorSet-darkGreen, $colorSet-green);
         background-image: -webkit-linear-gradient(to right, $colorSet-darkGreen, $colorSet-green);
       }
+      .headline {
+        svg {
+          color: $colorSet-green;
+        }
+      }
     }
     .section_join {
       .font-gradient {
         background-image: linear-gradient(to right, $colorSet-darkYellow, $colorSet-yellow);
         background-image: -webkit-linear-gradient(to right, $colorSet-darkYellow, $colorSet-yellow);
+      }
+      .headline {
+        svg {
+          color: $colorSet-yellow;
+        }
       }
     }
     .contents {
@@ -102,7 +125,7 @@ body {
   .wrap {
     padding: 0 10px;
     .container {
-      padding-top: 5rem;
+      padding-top: 6rem;
     }
   }
 }

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Layout from './Layout';
-import HeadImg from '../images/main/img_main_head.png';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGrinStars } from "@fortawesome/free-solid-svg-icons";
+import HeadImg from '../images/common/bg_headline_confetti.png';
 
 class Member extends Component {
 
@@ -13,7 +15,10 @@ class Member extends Component {
       <Layout>
         <section className="section_member">
           <div className="headline">
-            <div className="headline-image"><img src={HeadImg} /></div>
+            <div className="headline-image">
+              <img src={HeadImg} />
+              <FontAwesomeIcon icon={faGrinStars} size="8x" />
+            </div>
             <h2><span className="font-gradient">FE-STAR의<br />주인공들을<br />소개합니다</span></h2>
             <p><span className="font-gradient">아래에서 참석자들을<br />확인해 보세요</span></p>
           </div>
