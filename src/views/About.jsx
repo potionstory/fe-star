@@ -16,7 +16,7 @@ class About extends Component {
       {
         image: imageFrontend,
         title: "Front-End SuperStar",
-        text: "FE-star는 Front-End와 SuperStar의 합성어로서 Front-End 개발자분들이 바로 주인공이며 SuperStar라는 뜻입니다. 바로 Front-End 개발자분들을 위한 행사입니다."
+        text: "FE-star는 Front-End와 SuperStar의 합성어로서 Front-End 개발자분들이 바로 주인공이며 SuperStar라는 뜻입니다. 바로 Front-End 개발자분들을 위한 모임입니다."
       },
       {
         image: imageKakao,
