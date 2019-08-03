@@ -61,13 +61,13 @@ body {
         }
       }
     }
-    .section_main {
+    .section-main {
       .font-gradient {
         background-image: linear-gradient(to right, $colorSet-lightGray, $colorSet-white);
         background-image: -webkit-linear-gradient(to right, $colorSet-lightGray, $colorSet-white);
       }
     }
-    .section_about {
+    .section-about {
       .font-gradient {
         background-image: linear-gradient(to right, $colorSet-darkBlue, $colorSet-blue);
         background-image: -webkit-linear-gradient(to right, $colorSet-darkBlue, $colorSet-blue);
@@ -77,8 +77,14 @@ body {
           color: $colorSet-blue;
         }
       }
+      .contents {
+        .card-area {
+          display: flex;
+          flex-wrap: wrap;
+        }
+      }
     }
-    .section_info {
+    .section-info {
       .font-gradient {
         background-image: linear-gradient(to right, $colorSet-darkPink, $colorSet-pink);
         background-image: -webkit-linear-gradient(to right, $colorSet-darkPink, $colorSet-pink);
@@ -89,7 +95,7 @@ body {
         }
       }
     }
-    .section_member {
+    .section-member {
       .font-gradient {
         background-image: linear-gradient(to right, $colorSet-darkGreen, $colorSet-green);
         background-image: -webkit-linear-gradient(to right, $colorSet-darkGreen, $colorSet-green);
@@ -100,7 +106,7 @@ body {
         }
       }
     }
-    .section_join {
+    .section-join {
       .font-gradient {
         background-image: linear-gradient(to right, $colorSet-darkYellow, $colorSet-yellow);
         background-image: -webkit-linear-gradient(to right, $colorSet-darkYellow, $colorSet-yellow);
@@ -126,6 +132,9 @@ body {
     padding: 0 10px;
     .container {
       padding-top: 6rem;
+      .contents {
+        margin-top: 5rem;
+      }
     }
   }
 }

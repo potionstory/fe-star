@@ -1,0 +1,71 @@
+@import '../../style/common';
+
+.card-box {
+  width: 50%;
+  position: relative;
+  margin-top: 2rem;
+  box-sizing: border-box;
+  align-items: center;
+  &:first-child,
+  &:first-child + .card-box {
+    margin-top: 0;
+  }
+  &:nth-child(2n-1) {
+    padding-right: 1rem;
+  }
+  &:nth-child(2n) {
+    padding-left: 1rem;
+  }
+  .card-inner {
+    overflow: hidden;
+    height: 100%;
+    background-color: $colorSet-gray;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    i {
+      display: block;
+      overflow: hidden;
+      position: relative;
+      height: 15rem;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.3s ease-in-out;
+      }
+      p {
+        margin-top: 1rem;
+      }
+    }
+    &:hover {
+      i {
+        img {
+          transform: scale(1.2);
+        }
+      }
+    }
+    .text-box {
+      padding: 2rem;
+      background-color: $colorSet-gray;
+      .description {
+        h3 {
+          font-size: $fontSize-32;
+          color: $colorSet-blue;
+          line-height: 2.5rem;
+        }
+        p {
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .card-box {
+    width: 100%;
+    padding: 0 !important;
+    margin-top: 2rem !important;
+  }
+}

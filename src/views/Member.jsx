@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Layout from './Layout';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGrinStars } from "@fortawesome/free-solid-svg-icons";
+import { faGrinStars } from '@fortawesome/free-solid-svg-icons';
 import HeadImg from '../images/common/bg_headline_confetti.png';
 
 class Member extends Component {
@@ -13,7 +13,7 @@ class Member extends Component {
   render() {
     return (
       <Layout>
-        <section className="section_member">
+        <section className="section-member">
           <div className="headline">
             <div className="headline-image">
               <img src={HeadImg} />

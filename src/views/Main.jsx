@@ -11,7 +11,7 @@ class Main extends Component {
   render() {
     return (
       <Layout>
-        <section className="section_main">
+        <section className="section-main">
           <div className="headline">
             <div className="headline-image"><img src={HeadImg} /></div>
             <h2><span className="font-gradient">FE-STAR<br />2019</span></h2>
