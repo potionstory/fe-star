@@ -32,10 +32,26 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        transition: all 0.3s ease-in-out;
+        transition: all 300ms ease-in-out;
       }
       p {
         margin-top: 1rem;
+      }
+    }
+    .text-box {
+      padding: 2rem;
+      background-color: $colorSet-gray;
+      .description {
+        opacity: 0.5;
+        transition: opacity 300ms ease-in-out;
+        h3 {
+          font-size: $fontSize-32;
+          color: $colorSet-blue;
+          line-height: 2.5rem;
+        }
+        p {
+          margin-top: 2rem;
+        }
       }
     }
     &:hover {
@@ -44,18 +60,9 @@
           transform: scale(1.2);
         }
       }
-    }
-    .text-box {
-      padding: 2rem;
-      background-color: $colorSet-gray;
-      .description {
-        h3 {
-          font-size: $fontSize-32;
-          color: $colorSet-blue;
-          line-height: 2.5rem;
-        }
-        p {
-          margin-top: 2rem;
+      .text-box {
+        .description {
+          opacity: 1;
         }
       }
     }
@@ -73,6 +80,11 @@
           img {
             transform: none;
           }
+        }
+      }
+      .text-box {
+        .description {
+          opacity: 1;
         }
       }
     }
