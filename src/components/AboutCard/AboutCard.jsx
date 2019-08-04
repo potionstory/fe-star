@@ -1,7 +1,7 @@
 import React from 'react';
-import './ContentsCard.scss';
+import './AboutCard.scss';
 
-const Contents = (props) => {
+const AboutCard = (props) => {
 
   const { image, title, text } = props;
 
@@ -22,4 +22,4 @@ const Contents = (props) => {
   );
 };
 
-export default Contents;
+export default AboutCard;

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Layout from './Layout';
-import ContentsCard from '../components/ContentsCard';
+import AboutCard from '../components/AboutCard';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCompass } from '@fortawesome/free-solid-svg-icons';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 import HeadImg from '../images/common/bg_headline_confetti.png';
 import imageFrontend from '../images/about/about_frontend.jpg';
 import imageKakao from '../images/about/about_kakao.png';
@@ -50,15 +50,15 @@ class About extends Component {
           <div className="headline">
             <div className="headline-image">
               <img src={HeadImg} />
-              <FontAwesomeIcon icon={faCompass} size="8x" />
+              <FontAwesomeIcon icon={faStar} size="8x" />
             </div>
             <h2><span className="font-gradient">FE의<br />FE에 의한<br />FE를 위한<br />FE-STAR</span></h2>
             <p><span className="font-gradient">사람과 사람사이를<br />이어주는 축제의 장</span></p>
           </div>
           <article className="contents">
-            <div className="card-area">
+            <div className="about-card">
               {contents.map(item => (
-                <ContentsCard
+                <AboutCard
                   key={item.title}
                   image={item.image}
                   title={item.title}

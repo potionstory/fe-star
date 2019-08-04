@@ -8,6 +8,9 @@
 
 body {
   background-color: $colorSet-darkGray;
+  .number {
+    font-family: 'Arial';
+  }
 }
 
 .wrap {
@@ -78,7 +81,7 @@ body {
         }
       }
       .contents {
-        .card-area {
+        .about-card {
           display: flex;
           flex-wrap: wrap;
         }
