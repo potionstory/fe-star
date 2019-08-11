@@ -29,6 +29,12 @@
       .card-inner {
         flex: 1;
         width: 50%;
+        &:nth-child(2n-1) {
+          padding-right: 1rem;
+        }
+        &:nth-child(2n) {
+          padding-left: 1rem;
+        }
       }
     }
   }

@@ -1,0 +1,57 @@
+@import '../../style/common';
+
+.MuiPickersStaticWrapper-staticWrapperRoot {
+  min-width: none;
+  background-color: transparent !important;
+  .MuiPickersToolbar-toolbar {
+    flex-direction: row;
+    align-items: center !important;
+    background-color: $colorSet-pink !important;
+    border-radius: 0.5rem;
+    .MuiPickersToolbarButton-toolbarBtn {
+      margin-right: 1rem;
+      .MuiTypography-subtitle1 {
+        font-size: $fontSize-32 !important;
+        font-weight: bold;
+        color: $colorSet-white;
+      }
+    }
+    .MuiPickersToolbarText-toolbarBtnSelected {
+      font-size: $fontSize-32 !important;
+      font-weight: bold;
+      color: $colorSet-white;
+    }
+  }
+  .MuiPickersBasePicker-pickerView {
+    max-width: none;
+    margin-top: 1rem;
+    .MuiPickersCalendarHeader-iconButton {
+      background-color: transparent;
+      .MuiSvgIcon-root {
+        color: $colorSet-pink;
+      }
+    }
+    .MuiTypography-body1 {
+      color: $colorSet-pink;
+      font-weight: bold;
+    }
+    .MuiPickersCalendarHeader-dayLabel {
+      flex: 1;
+      width: auto;
+      color: $colorSet-white;
+      opacity: 0.5;
+    }
+    .MuiPickersCalendar-week {
+      div {
+        flex: 1;
+        text-align: center;
+        .MuiTypography-body2 {
+          color: $colorSet-white;
+        }
+        .MuiPickersDay-daySelected {
+          background-color: $colorSet-pink;
+        }
+      }
+    }
+  }
+}

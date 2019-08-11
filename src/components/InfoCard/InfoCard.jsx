@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { MuiPickersUtilsProvider } from '@material-ui/pickers';
+import DateFnsUtils from '@date-io/date-fns';
+import koLocale from 'date-fns/locale/ko';
+import Calendar from '../Calendar';
 import './InfoCard.scss';
 
 class InfoCard extends Component {
-
-  state = {
-    date: new Date(),
-  };
-
-  onChange = date => this.setState({ date });
 
   render() {
 
@@ -23,6 +21,9 @@ class InfoCard extends Component {
         <div className="card-body">
           <div className="card-inner">
             <div className="calendar-box">
+            <MuiPickersUtilsProvider utils={DateFnsUtils} locale={koLocale}>
+              <Calendar />
+            </MuiPickersUtilsProvider>
             </div>
           </div>
           <div className="card-inner">
