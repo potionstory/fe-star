@@ -16,6 +16,7 @@ class Calendar extends Component {
         variant="static"
         openTo="date"
         value={date}
+        onChange={() => {return null;}}
       />
     );
   };
