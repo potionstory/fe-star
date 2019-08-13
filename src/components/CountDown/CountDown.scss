@@ -1,0 +1,38 @@
+@import '../../style/common';
+
+.count-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  .count-item {
+    width: 50%;
+    text-align: center;
+    .count-element {
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      justify-content: center;
+      strong {
+        font-size: $fontSize-112;
+        font-weight: 600;
+        color: $colorSet-pink;
+        line-height: 7rem;
+      }
+      span {
+        font-size: $fontSize-20;
+        color: $colorSet-white;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .count-wrap {
+    .count-item {
+      .count-element {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
