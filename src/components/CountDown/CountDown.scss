@@ -3,15 +3,14 @@
 .count-wrap {
   display: flex;
   flex-wrap: wrap;
-  height: 100%;
   .count-item {
     width: 50%;
     text-align: center;
     .count-element {
       display: flex;
-      height: 100%;
       flex-direction: column;
       justify-content: center;
+      margin-top: 1rem;
       strong {
         font-size: $fontSize-112;
         font-weight: 600;

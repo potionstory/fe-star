@@ -35,6 +35,15 @@
         &:nth-child(2n) {
           padding-left: 1rem;
         }
+        .time-box {
+          height: 80px;
+          border-radius: 0.5rem;
+          background-color: $colorSet-pink;
+          font-size: $fontSize-32 !important;
+          font-weight: 600;
+          text-align: center;
+          line-height: 80px;
+        }
       }
     }
   }

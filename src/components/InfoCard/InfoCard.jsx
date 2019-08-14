@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns';
 import koLocale from 'date-fns/locale/ko';
+import moment from 'moment';
 import Calendar from '../Calendar';
 import CountDown from '../CountDown';
 import './InfoCard.scss';
@@ -10,7 +11,7 @@ import './InfoCard.scss';
 class InfoCard extends Component {
 
   state = {
-    date: new Date('2019/10/05/19:00:00'),
+    date: moment('10/05/2019 19:00:00'),
     days: 0,
     hours: 0,
     min: 0,
@@ -29,7 +30,7 @@ class InfoCard extends Component {
   };
 
   calculateCountdown(endDate) {
-    let diff = (Date.parse(new Date(endDate)) - Date.parse(new Date())) / 1000;
+    let diff = (Date.parse(moment(endDate)) - Date.parse(moment())) / 1000;
 
     // clear countdown when date is reached
     if (diff <= 0) return false;
@@ -89,6 +90,7 @@ class InfoCard extends Component {
             </div>
           </div>
           <div className="card-inner">
+            <div className="time-box number">19:00 - 23:00</div>
             <CountDown
               days={days}
               hours={hours}
