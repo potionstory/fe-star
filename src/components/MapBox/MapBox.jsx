@@ -39,6 +39,7 @@ class MapBox extends Component {
         <div className="card-body">
           <div className="card-map">
             <div className="card-inner">
+              <div className="locate-box">서울특별시 강남구 선릉로 133길 17 2층</div>
               <div className="map-box" id="map"></div>
             </div>
           </div>

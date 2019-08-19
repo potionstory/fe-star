@@ -1,0 +1,28 @@
+@import '../../style/common';
+
+.card-schedule {
+  .card-inner {
+    table {
+      width: 100%;
+      text-align: center;
+      border-collapse: collapse;
+      thead {
+        th {
+          background-color: $colorSet-pink;
+          font-size: $fontSize-20;
+          line-height: 40px;
+        }
+      }
+      tbody {
+        td {
+          border-left: 1px solid $colorSet-pink;
+          border-bottom: 1px solid $colorSet-pink;
+          line-height: 40px;
+          &:first-child {
+            border-left: none;
+          }
+        }
+      }
+    }
+  }
+}
