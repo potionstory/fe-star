@@ -8,9 +8,13 @@
       border-collapse: collapse;
       thead {
         th {
+          border-left: 1px solid $colorSet-gray;
           background-color: $colorSet-pink;
           font-size: $fontSize-20;
           line-height: 40px;
+          &:first-child {
+            border-left: none;
+          }
         }
       }
       tbody {
