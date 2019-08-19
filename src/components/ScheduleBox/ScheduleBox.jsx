@@ -26,7 +26,7 @@ class ScheduleBox extends Component {
                     <td>저녁식사(1부)</td>
                   </tr>
                   <tr>
-                  <td className="number">19:55 - 20:05</td>
+                    <td className="number">19:55 - 20:05</td>
                     <td>자리 바꾸기</td>
                   </tr>
                   <tr>
