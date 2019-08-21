@@ -21,7 +21,7 @@ class About extends Component {
       {
         image: imageKakao,
         title: "시작은 카톡으로부터...",
-        text: "카카오톡으로 많은 사람들이 점점 모이고, Front-End 개발자들을 위한 오픈톡방이 생기면서 사람들은 소통을 시작하게 되었습니다. 그것이 시작이었습니다."
+        text: "카톡으로 많은 사람들이 점점 모이고, Front-End 개발자들을 위한 오픈톡방이 생기면서 사람들은 소통을 시작하게 되었습니다. 그것이 시작이었습니다."
       },
       {
         image: imageOffline,

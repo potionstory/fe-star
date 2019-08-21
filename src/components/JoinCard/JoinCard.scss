@@ -1,0 +1,60 @@
+@import '../../style/common';
+
+.join-wrap {
+  display: flex;
+  justify-content: center;
+  .join-card {
+    flex: 0.5;
+    overflow: hidden;
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: $colorSet-gray;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    .join-item {
+      margin-top: 2rem;
+      opacity: 0.5;
+      transition: opacity 300ms ease-in-out;
+      &:first-child {
+        margin-top: 0;
+      }
+      &:hover {
+        opacity: 1;
+      }
+      .title {
+        display: inline-block;
+        font-weight: 600;
+      }
+      .item-box {
+        display: flex;
+        overflow: hidden;
+        height: 50px;
+        margin-top: 0.5rem;
+        border-radius: 25px;
+        background-color: $colorSet-darkGray;
+        label {
+          display: block;
+          svg {
+            width: 50px;
+            height: 50px;
+          }
+        }
+        input {
+          flex: 1;
+          margin: 0 1rem;
+          font-size: $fontSize-30;
+          font-weight: 600;
+          color: $colorSet-white;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .join-wrap {
+    .join-card {
+      flex: 1;
+    }
+  }
+}
