@@ -49,10 +49,12 @@ span, p, div {
 input {
   border: none;
   background-color: transparent;
+  font-family: "Noto Sans KR";
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   outline: none;
+  letter-spacing: -1px;
 }
 
 input:-webkit-autofill,
