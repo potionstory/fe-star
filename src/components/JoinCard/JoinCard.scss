@@ -1,18 +1,18 @@
 @import '../../style/common';
 
 .join-wrap {
-  display: flex;
-  justify-content: center;
   .join-card {
-    flex: 0.5;
+    display: block;
     overflow: hidden;
-    margin-top: 2rem;
+    width: 50%;
+    margin: 2rem auto 0;
     padding: 2rem;
     background-color: $colorSet-gray;
+    box-sizing: border-box;
     border-radius: 0.5rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     .join-item {
-      margin-top: 2rem;
+      margin-top: 1rem;
       opacity: 0.5;
       transition: opacity 300ms ease-in-out;
       &:first-child {
@@ -70,13 +70,41 @@
       }
     }
   }
+  .join-submit {
+    margin-top: 2rem;
+    text-align: center;
+    button {
+      display: inline-block;
+      width: 50%;
+      height: 50px;
+      border-radius: 0.5rem;
+      box-sizing: border-box;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      background-color: $colorSet-gray;
+      font-size: $fontSize-20;
+      font-weight: 600;
+      color: $colorSet-white;
+      text-align: center;
+      line-height: 50px;
+      opacity: 0.5;
+      transition: opacity 300ms ease-in-out;
+      cursor: pointer;
+      &:hover {
+        opacity: 1;
+      }
+      &.active {
+        background-color: $colorSet-yellow;
+        color: $colorSet-darkGray;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 640px) {
   .join-wrap {
     .join-card {
-      flex: 1;
-      padding: 0.5rem;
+      width: 100%;
+      padding: 1rem;
       .join-item {
         .item-box {
           height: 40px;
@@ -90,6 +118,18 @@
           input {
             line-height: 40px;
           }
+        }
+      }
+    }
+    .join-submit {
+      button {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        &.active {
+          background-color: $colorSet-yellow;
+          color: $colorSet-darkGray;
+          opacity: 1;
         }
       }
     }
