@@ -11,60 +11,96 @@
     box-sizing: border-box;
     border-radius: 0.5rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    .join-item {
-      margin-top: 1rem;
-      opacity: 0.5;
-      transition: opacity 300ms ease-in-out;
-      &:first-child {
-        margin-top: 0;
+    .card-head {
+      svg {
+        color: $colorSet-yellow;
+        vertical-align: middle;
       }
-      &:hover {
-        opacity: 1;
-      }
-      .title {
+      h3 {
         display: inline-block;
-        font-weight: 600;
-        transition: color 300ms ease-in-out;
+        padding-left: 1rem;
+        font-size: $fontSize-32;
+        color: $colorSet-yellow;
+        line-height: 2rem;
+        vertical-align: middle;
       }
-      .item-box {
-        display: flex;
-        overflow: hidden;
-        height: 50px;
-        margin-top: 0.5rem;
-        border-radius: 25px;
-        background-color: $colorSet-darkGray;
-        label {
-          width: 50px;
-          svg {
-            width: 50px;
-            height: 50px;
-            transition: color 300ms ease-in-out;
+    }
+    .card-body {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid $colorSet-lightGray;
+      ul {
+        li {
+          position: relative;
+          margin-top: 0.5rem;
+          padding-left: 1rem;
+          font-size: $fontSize-20;
+          &:first-child {
+            margin-top: 0;
+          }
+          &:before {
+            position: absolute;
+            top: 0.25rem;
+            left: 0;
+            content: '*'
           }
         }
-        input {
-          flex: 1;
-          width: 100%;
-          margin: 0 1rem;
-          font-size: $fontSize-24;
+      }
+      .join-item {
+        margin-top: 1rem;
+        opacity: 0.5;
+        transition: opacity 300ms ease-in-out;
+        &:first-child {
+          margin-top: 0;
+        }
+        &:hover {
+          opacity: 1;
+        }
+        .title {
+          display: inline-block;
           font-weight: 600;
-          color: $colorSet-white;
-          line-height: 50px;
           transition: color 300ms ease-in-out;
         }
-      }
-      &.active {
-        opacity: 1;
-        .title {
-          color: $colorSet-yellow;
-        }
         .item-box {
+          display: flex;
+          overflow: hidden;
+          height: 50px;
+          margin-top: 0.5rem;
+          border-radius: 25px;
+          background-color: $colorSet-darkGray;
           label {
+            width: 50px;
             svg {
-              color: $colorSet-yellow;
+              width: 50px;
+              height: 50px;
+              transition: color 300ms ease-in-out;
             }
           }
           input {
+            flex: 1;
+            width: 100%;
+            margin: 0 1rem;
+            font-size: $fontSize-24;
+            font-weight: 600;
+            color: $colorSet-white;
+            line-height: 50px;
+            transition: color 300ms ease-in-out;
+          }
+        }
+        &.active {
+          opacity: 1;
+          .title {
             color: $colorSet-yellow;
+          }
+          .item-box {
+            label {
+              svg {
+                color: $colorSet-yellow;
+              }
+            }
+            input {
+              color: $colorSet-yellow;
+            }
           }
         }
       }
@@ -105,18 +141,26 @@
     .join-card {
       width: 100%;
       padding: 1rem;
-      .join-item {
-        .item-box {
-          height: 40px;
-          label {
-            width: 40px;
-            svg {
-              width: 40px;
-              height: 40px;
-            }
+      .card-body {
+        .join-item {
+          &:hover {
+            opacity: 0.5;
           }
-          input {
-            line-height: 40px;
+          &.active {
+            opacity: 1;
+          }
+          .item-box {
+            height: 40px;
+            label {
+              width: 40px;
+              svg {
+                width: 40px;
+                height: 40px;
+              }
+            }
+            input {
+              line-height: 40px;
+            }
           }
         }
       }
