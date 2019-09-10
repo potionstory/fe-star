@@ -3,7 +3,7 @@ const router = express.Router();
 const member = require('./member');
 
 router.get('/', (req, res) => {
-  res.send('<h1>FE-star API</h1>');
+  res.send('<h1>FE-STAR API</h1>');
 });
 
 router.use('/member', member);

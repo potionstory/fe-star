@@ -16,7 +16,7 @@ class About extends Component {
       {
         image: imageFrontend,
         title: "Front-End SuperStar",
-        text: "FE-star는 Front-End와 SuperStar의 합성어로서 Front-End 개발자분들이 바로 주인공이며 SuperStar라는 뜻입니다. 즉, Front-End 개발자분들을 위한 모임입니다."
+        text: "FE-STAR는 Front-End와 SuperStar의 합성어로서 Front-End 개발자분들이 바로 주인공이며 SuperStar라는 뜻입니다. 즉, Front-End 개발자분들을 위한 모임입니다."
       },
       {
         image: imageKakao,
@@ -26,7 +26,7 @@ class About extends Component {
       {
         image: imageOffline,
         title: "온라인에서부터 오프라인까지",
-        text: "온라인으로만 이루어졌던 소통은, 자연스럽게 오프라인으로까지 이어졌습니다. 결국 중요한건 기술 이전에 사람과 사람이었습니다. FE-star를 통해 디지털 세상 속 따뜻한 인연을 만나보기 바랍니다."
+        text: "온라인으로만 이루어졌던 소통은, 자연스럽게 오프라인으로까지 이어졌습니다. 결국 중요한건 기술 이전에 사람과 사람이었습니다. FE-STAR를 통해 디지털 세상 속 따뜻한 인연을 만나보기 바랍니다."
       },
       {
         image: imageParty,

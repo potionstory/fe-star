@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Layout from './Layout';
+import MemberCard from '../components/MemberCard';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import HeadImg from '../images/common/bg_headline_confetti.png';
@@ -23,7 +24,7 @@ class Member extends Component {
             <p><span className="font-gradient">아래에서 참석자들을<br />만나보세요</span></p>
           </div>
           <article className="contents">
-            <p>가나다라마바사아자차카타파하<br />ABCEDFGHIJKLMNOPQRSTUVWXYZ<br />0123456789</p>
+            <MemberCard />
           </article>
         </section>
       </Layout>
