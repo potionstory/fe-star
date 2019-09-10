@@ -1,1 +1,46 @@
-@import '../../style/common'; 
+@import '../../style/common';
+
+.member-wrap {
+  .member-card {
+    display: block;
+    overflow: hidden;
+    width: 50%;
+    margin: 2rem auto 0;
+    padding: 2rem;
+    background-color: $colorSet-gray;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    .card-head {
+      svg {
+        color: $colorSet-green;
+        vertical-align: middle;
+      }
+      h3 {
+        display: inline-block;
+        padding-left: 1rem;
+        font-size: $fontSize-32;
+        color: $colorSet-green;
+        line-height: 2rem;
+        vertical-align: middle;
+      }
+    }
+    .card-body {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid $colorSet-lightGray;
+    }
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .member-wrap {
+    .member-card {
+      width: 100%;
+      padding: 1rem;
+      .card-body {
+        
+      }
+    }
+  }
+}
