@@ -4,7 +4,7 @@ import './MemberCard.scss';
 const MemberCard = () => {
   return (
     <>
-      MemberCard
+      MemberCard 
     </>
   );
 };
