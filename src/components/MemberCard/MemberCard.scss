@@ -4,7 +4,7 @@
   .member-card {
     display: block;
     overflow: hidden;
-    width: 50%;
+    width: 100%;
     margin: 2rem auto 0;
     padding: 2rem;
     background-color: $colorSet-gray;
@@ -26,9 +26,57 @@
       }
     }
     .card-body {
+      display: flex;
+      flex-wrap: wrap;
       margin-top: 1rem;
       padding-top: 1rem;
       border-top: 1px solid $colorSet-lightGray;
+      .card-inner {
+        flex: auto;
+        width: 25%;
+        max-width: 25%;
+        margin-top: 1rem;
+        padding: 0 0.5rem;
+        &:nth-child(4n - 3) {
+          padding-left: 0;
+        }
+        &:nth-child(4n) {
+          padding-right: 0;
+        }
+        &:first-child,
+        &:first-child + .card-inner,
+        &:first-child + .card-inner + .card-inner,
+        &:first-child + .card-inner + .card-inner + .card-inner {
+          margin-top: 0;
+        }
+        .card-box {
+          padding: 0.5rem;
+          border-radius: 0.5rem;
+          background-color: $colorSet-green;
+          text-align: center;
+          .number {
+            display: block;
+            font-size: $fontSize-36;
+            font-weight: 600;
+          }
+          .nickname {
+            display: block;
+            overflow: hidden;
+            height: 3rem;
+            font-size: $fontSize-24;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            line-height: 3rem;
+          }
+        }
+      }
+      &.card-off {
+        .card-inner {
+          .card-box {
+            opacity: 0.5;
+          }
+        }
+      }
     }
   }
 }
@@ -39,7 +87,21 @@
       width: 100%;
       padding: 1rem;
       .card-body {
-        
+        .card-inner {
+          width: 50%;
+          max-width: 50%;
+          padding: 0 0.5rem;
+          &:nth-child(2n - 1) {
+            padding-left: 0;
+          }
+          &:nth-child(2n) {
+            padding-right: 0;
+          }
+          &:first-child + .card-inner + .card-inner,
+          &:first-child + .card-inner + .card-inner + .card-inner {
+            margin-top: 1rem;
+          }
+        }
       }
     }
   }

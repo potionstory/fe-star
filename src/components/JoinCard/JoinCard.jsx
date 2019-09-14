@@ -74,8 +74,8 @@ class JoinCard extends Component {
     });
     const { MemberActions } = this.props;
     const data = {
-      name: value[0],
-      nickname: value[1],
+      name: value[1],
+      nickname: value[0],
       mobile: value[2],
       email: value[3]
     };
