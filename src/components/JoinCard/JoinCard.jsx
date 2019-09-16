@@ -146,7 +146,7 @@ class JoinCard extends Component {
             </div>
           </div>
           <div className="join-submit">
-            <button type="button" className={active === item.length ? "active" : null} onClick={handleJoin}>참가하기</button>
+            <button type="button" className={active === item.length ? "active" : null} onClick={active === item.length ? handleJoin : () => { alert('모두 입력해 주시기 바랍니다') }}>참가하기</button>
           </div>
         </div>
       </>
