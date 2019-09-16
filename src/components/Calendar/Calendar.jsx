@@ -5,7 +5,7 @@ import './Calendar.scss';
 class Calendar extends Component {
 
   state = {
-    date: new Date('2019-10-05')
+    date: new Date('2019-09-27')
   };
 
   render() {
