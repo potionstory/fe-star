@@ -10,7 +10,7 @@ import './DateBox.scss';
 class DateCard extends Component {
 
   state = {
-    date: moment('10/05/2019 19:00:00'),
+    date: moment('09/27/2019 19:00:00'),
     days: 0,
     hours: 0,
     min: 0,

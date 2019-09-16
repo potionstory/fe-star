@@ -23,9 +23,20 @@ exports.create = (req, res) => {
   const data = req.body;
   const member = new Member(data);
 
-  member.save((err, data) => {
-    if (err) throw new Error(err);
-    res.send(data);
+  Member.findOne( { mobile: data.mobile }, (err, exists) => {
+    console.log(data + '1');
+    if (err) throw err;
+    if (exists) {
+      return res.status(409).json({
+        error: "이미 존재하는 전화번호입니다"
+      });
+    }
+
+    member.save((err, data) => {
+      console.log('member save1');
+      if (err) throw new Error(err);
+      res.send(data);
+    });
   });
 }
 

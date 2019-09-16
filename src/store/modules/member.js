@@ -33,7 +33,12 @@ export default handleActions({
   ...pender({
     type: CREATE,
     onSuccess: (state, action) => {
-      console.log('CREATE');
+      console.log('CREATE SUCCESS');
+      return state;
+    },
+    onFailure: (state, action) => {
+      alert(action.payload.response.data.error);
+      console.log('CREATE FAILURE');
       return state;
     }
   }),

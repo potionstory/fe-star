@@ -6,7 +6,7 @@ class MapBox extends Component {
   componentDidMount() {
     let el = document.getElementById('map');
     let map = new daum.maps.Map(el, {
-      center: new daum.maps.LatLng(33.450701, 126.570667)
+      center: new daum.maps.LatLng(37.512510, 127.048600)
     });
 
     // 지도 컨트롤 관련
@@ -22,7 +22,7 @@ class MapBox extends Component {
     map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 
     // 지도 마커 관련
-    let markerPosition  = new kakao.maps.LatLng(33.450701, 126.570667); 
+    let markerPosition  = new kakao.maps.LatLng(37.512650, 127.048580); 
 
     // 마커를 생성합니다
     let marker = new kakao.maps.Marker({
@@ -39,7 +39,7 @@ class MapBox extends Component {
         <div className="card-body">
           <div className="card-map">
             <div className="card-inner">
-              <div className="locate-box">서울특별시 강남구 선릉로 133길 17 2층</div>
+              <div className="locate-box">서울 강남구 봉은사로67길 14 슬로우드림 스튜디오 (지하 1층)</div>
               <div className="map-box" id="map"></div>
             </div>
           </div>

@@ -20,12 +20,12 @@ class MemberCard extends Component {
     MemberActions.find();
   };
 
-  handleMember = (id) => {
+  handleMember = async (id) => {
     console.log('handleMember');
     const { MemberActions } = this.props;
     const { admin } = this.state;
-    MemberActions.update(id, { "deposit": true });
-    MemberActions.find();
+    await MemberActions.update(id, { "deposit": true });
+    await MemberActions.find();
   };
 
   handleAdmin = () => {
