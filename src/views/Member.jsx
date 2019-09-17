@@ -21,7 +21,7 @@ class Member extends Component {
               <FontAwesomeIcon icon={faStar} size="8x" />
             </div>
             <h2><span className="font-gradient">FE-STAR의<br />주인공들을<br />소개합니다</span></h2>
-            <p><span className="font-gradient">아래에서 참석자들을<br />만나보세요</span></p>
+            <p><span className="font-gradient">아래에서 참가자들을<br />만나보세요</span></p>
           </div>
           <article className="contents">
             <MemberCard />
