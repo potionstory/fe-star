@@ -21,10 +21,8 @@ class MemberCard extends Component {
   };
 
   handleMember = async (id) => {
-    console.log('handleMember');
     const { MemberActions } = this.props;
-    const { admin } = this.state;
-    await MemberActions.update(id, { "deposit": true });
+    await MemberActions.update(id, { "deposit": true, "depositDate": new Date() });
     await MemberActions.find();
   };
 

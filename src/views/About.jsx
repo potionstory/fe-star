@@ -53,7 +53,7 @@ class About extends Component {
               <FontAwesomeIcon icon={faStar} size="8x" />
             </div>
             <h2><span className="font-gradient">FE의<br />FE에 의한<br />FE를 위한<br />FE-STAR</span></h2>
-            <p><span className="font-gradient">사람과 사람사이를<br />이어주는 축제의 장</span></p>
+            <p><span className="font-gradient">사람과 사람사이를<br />이어주는 모임의 장</span></p>
           </div>
           <article className="contents">
             <div className="about-card">

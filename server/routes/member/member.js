@@ -2,7 +2,7 @@ const { Member } = require('../../model');
 
 /* member 모두 찾기 */
 exports.find = (req, res) => {
-  Member.find({}).exec((err, data) => {
+  Member.find({}).sort( { "depositDate": 1 } ).exec((err, data) => {
     if (err) throw new Error(err);
     res.send(data);
   });
@@ -24,7 +24,6 @@ exports.create = (req, res) => {
   const member = new Member(data);
 
   Member.findOne( { mobile: data.mobile }, (err, exists) => {
-    console.log(data + '1');
     if (err) throw err;
     if (exists) {
       return res.status(409).json({
@@ -33,7 +32,6 @@ exports.create = (req, res) => {
     }
 
     member.save((err, data) => {
-      console.log('member save1');
       if (err) throw new Error(err);
       res.send(data);
     });
