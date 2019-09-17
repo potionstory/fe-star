@@ -113,7 +113,7 @@ class JoinCard extends Component {
                 <li>참가하기 버튼을 누르면 정모톡방의 비밀번호가 공개되며, 정모톡방에 입장시 프론트개발자방의 대화명과 일치시켜 주시기 바랍니다.</li>
                 <li>정모톡방에 입장하면 공지사항에서 계좌번호를 확인할 수 있습니다.</li>
                 <li>정모톡방에 입장해도 입금자가 40명이 되면 정모참가가 어렵습니다.</li>
-                <li><a href="https://open.kakao.com/o/g35YNoEb">정모톡방 바로가기</a></li>
+                <li><a target="_blank" href="https://open.kakao.com/o/g35YNoEb">정모톡방 바로가기</a></li>
               </ul>
             </div>
           </div>
