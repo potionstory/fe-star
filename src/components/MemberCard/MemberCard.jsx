@@ -86,7 +86,7 @@ class MemberCard extends Component {
             <div className="card-body">
               {money_on_list.map((value, index) => {
                 return (
-                  <div key={value._id} className="card-inner">
+                  <div key={value.nickname + index} className="card-inner">
                     <div className="card-box">
                       <span className="number">{index + 1}</span>
                       <span className="nickname">{value.nickname}</span>
@@ -105,7 +105,7 @@ class MemberCard extends Component {
             <div className="card-body card-off">
               {money_off_list.map((value, index) => {
                 return (
-                  <div key={value._id} className="card-inner">
+                  <div key={value.nickname + index} className="card-inner">
                     <div className="card-box" onClick={ login ? () => handleMember(value._id) : null }>
                       <span className="number">{index + 1}</span>
                       <span className="nickname">{value.nickname}</span>
