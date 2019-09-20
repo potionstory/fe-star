@@ -2,7 +2,7 @@ const { Member } = require('../../model');
 
 /* member 모두 찾기 */
 exports.find = (req, res) => {
-  Member.find({}, { _id: 1, name: 0, mobile: 0 }).sort( { "depositDate": 1 } ).exec((err, data) => {
+  Member.find({}, { _id: 1, nickname: 1, deposit: 1, depositDate: 1 }).sort( { "depositDate": 1 } ).exec((err, data) => {
     if (err) throw new Error(err);
     res.send(data);
   });
