@@ -1,0 +1,115 @@
+@import './common';
+
+header, footer {
+  visibility: hidden;
+}
+
+.quiz-menu {
+  margin: 100px 0;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      flex: auto;
+      width: 25%;
+      max-width: 25%;
+      padding: 1rem;
+      box-sizing: border-box;
+      a {
+        display: block;
+        padding: 3rem;
+        border-radius: 1rem;
+        background-color: $colorSet-blue;
+        font-size: $fontSize-112;
+        font-weight: 600;
+        color: $colorSet-white;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.quiz-cont {
+  margin: 100px 0;
+  text-align: center;
+  ul {
+    li {
+      display: none;
+      font-size: $fontSize-112;
+      font-weight: 600;
+      color: $colorSet-white;
+    }
+    &.quiz0 {
+      li:nth-child(1) {
+        display: block;
+      }
+    }
+    &.quiz1 {
+      li:nth-child(2) {
+        display: block;
+      }
+    }
+    &.quiz2 {
+      li:nth-child(3) {
+        display: block;
+      }
+    }
+    &.quiz3 {
+      li:nth-child(4) {
+        display: block;
+      }
+    }
+    &.quiz4 {
+      li:nth-child(5) {
+        display: block;
+      }
+    }
+    &.quiz5 {
+      li:nth-child(6) {
+        display: block;
+      }
+    }
+    &.quiz6 {
+      li:nth-child(7) {
+        display: block;
+      }
+    }
+    &.quiz7 {
+      li:nth-child(8) {
+        display: block;
+      }
+    }
+    &.quiz8 {
+      li:nth-child(9) {
+        display: block;
+      }
+    }
+    &.quiz9 {
+      li:nth-child(10) {
+        display: block;
+      }
+    }
+  }
+  button {
+    display: inline-block;
+    margin-top: 100px;
+    padding: 1rem 5rem;
+    border-radius: 1rem;
+    background-color: $colorSet-blue;
+    font-size: $fontSize-56;
+    font-weight: 600;
+    color: $colorSet-white;
+    cursor: pointer;
+  }
+  a {
+    display: inline-block;
+    margin-top: 100px;
+    padding: 1rem 5rem;
+    border-radius: 1rem;
+    background-color: $colorSet-yellow;
+    font-size: $fontSize-56;
+    font-weight: 600;
+    color: $colorSet-darkGray;
+    cursor: pointer;
+  }
+}
