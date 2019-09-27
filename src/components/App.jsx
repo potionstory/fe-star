@@ -28,7 +28,7 @@ const App = () => {
         <Route path="/member" component={ Member } />
         <Route path="/join" component={ Join } />
         <Route path="/test" component={ Test } />
-        <Route path="/quiz/1" component={ Quiz1 } />
+        {/* <Route path="/quiz/1" component={ Quiz1 } />
         <Route path="/quiz/2" component={ Quiz2 } />
         <Route path="/quiz/3" component={ Quiz3 } />
         <Route path="/quiz/4" component={ Quiz4 } />
@@ -36,7 +36,7 @@ const App = () => {
         <Route path="/quiz/6" component={ Quiz6 } />
         <Route path="/quiz/7" component={ Quiz7 } />
         <Route path="/quiz/8" component={ Quiz8 } />
-        <Route path="/quiz" component={ Quiz } />
+        <Route path="/quiz" component={ Quiz } /> */}
         <Redirect to="/" />
       </Switch>
     </>
