@@ -35,7 +35,7 @@
     "dotenv": "^8.0.0",
     "express": "^4.17.1",
     "file-loader": "^4.1.0",
-    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-plugin": "^5.5.0",
     "identity-obj-proxy": "^3.0.0",
     "mini-css-extract-plugin": "^0.8.0",
     "moment": "^2.24.0",
@@ -54,7 +54,7 @@
     "style-loader": "^0.23.1",
     "url-loader": "^2.1.0",
     "webpack": "^4.35.3",
-    "webpack-cli": "^3.3.6"
+    "webpack-cli": "^3.3.12"
   },
   "devDependencies": {
     "webpack-dev-middleware": "^3.7.0",
